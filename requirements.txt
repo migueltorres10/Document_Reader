@@ -1,5 +1,6 @@
 pyodbc
 python-dotenv
+psycopg2-binary
 pytesseract
 pdf2image
 Pillow
