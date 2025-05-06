@@ -1,31 +1,37 @@
-from db_utils import get_tipos_documento, get_fornecedores
+from db_utils import get_fornecedores, get_clientes
+from document_types import (
+    TIPOS_DOCUMENTO_FORNECEDOR,
+    TIPOS_DOCUMENTO_CLIENTE,
+    TIPOS_ESPECIAIS
+)
 
-def classify_document(texto):
-    """
-    Identifica o tipo de documento com base nos termos cadastrados no banco.
-    """
+def identificar_tipo_documento(texto):
     texto = texto.lower()
-    tipos = get_tipos_documento()
 
-    for tipo in tipos:
-        if tipo in texto:
-            return tipo.title()
-    return "Desconhecido"
+    if identificar_fornecedor(texto):
+        return classificar_por_padroes(texto, TIPOS_DOCUMENTO_FORNECEDOR, "Cotação")
+    elif identificar_cliente(texto):
+        return classificar_por_padroes(texto, TIPOS_DOCUMENTO_CLIENTE, "Orçamento")
+    else:
+        return classificar_por_padroes(texto, TIPOS_ESPECIAIS, "Desconhecido")
 
-def identify_supplier(texto):
-    """
-    Identifica o fornecedor com base em NIF ou nome cadastrado no banco.
-    """
-    texto_lower = texto.lower()
+def classificar_por_padroes(texto, padroes, padrao_padrao):
+    for tipo, palavras in padroes.items():
+        for palavra in palavras:
+            if palavra in texto:
+                return tipo
+    return padrao_padrao
+
+def identificar_fornecedor(texto):
     fornecedores = get_fornecedores()
+    for f in fornecedores:
+        if f["nif"] in texto or f["nome"].lower() in texto.lower():
+            return f
+    return None
 
-    for fornecedor in fornecedores:
-        # Por NIF
-        if fornecedor["nif"] in texto:
-            return fornecedor["nome"]
-
-        # Por nome (simplificado)
-        if fornecedor["nome"].lower() in texto_lower:
-            return fornecedor["nome"]
-
-    return "Fornecedor Desconhecido"
+def identificar_cliente(texto):
+    clientes = get_clientes()
+    for c in clientes:
+        if c["nif"] in texto or c["nome"].lower() in texto.lower():
+            return c
+    return None

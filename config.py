@@ -18,6 +18,6 @@ PG_DATABASE = os.getenv("PG_DATABASE")
 PG_USER = os.getenv("PG_USER")
 PG_PASSWORD = os.getenv("PG_PASSWORD")
 
-TESSERACT_CMD = os.getenv("TESSERACT_CMD", "/usr/bin/tesseract")
+TESSERACT_CMD = os.getenv("TESSERACT_CMD")
 CONTINUITY_THRESHOLD = 0.85
 POPPLER_PATH = os.getenv("POPPLER_PATH")

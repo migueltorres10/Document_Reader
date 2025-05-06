@@ -1,6 +1,6 @@
-from analyzer import classify_document, identify_supplier
+from analyzer import identificar_tipo_documento, identificar_fornecedor
 
-def split_document_by_content(pages_text):
+def separar_documentos_por_conteudo(pages_text):
     """
     Divide uma lista de textos de páginas em documentos separados,
     com base em tipo de documento, fornecedor e heurísticas simples.
@@ -12,8 +12,8 @@ def split_document_by_content(pages_text):
     fornecedor_anterior = None
 
     for idx, texto in enumerate(pages_text):
-        tipo_atual = classify_document(texto)
-        fornecedor_atual = identify_supplier(texto)
+        tipo_atual = identificar_tipo_documento(texto)
+        fornecedor_atual = identificar_fornecedor(texto)
 
         nova_pagina = texto.strip().lower().startswith(("fatura", "nota", "recibo", "orçamento"))
 
