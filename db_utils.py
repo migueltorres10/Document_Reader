@@ -41,7 +41,7 @@ def test_connection():
 def get_tipos_documento():
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT nome FROM tipos_documento")
+    cursor.execute("SELECT RTRIM(nome) FROM tipos_documento")
     tipos = [row[0].lower() for row in cursor.fetchall()]
     conn.close()
     return tipos
@@ -49,7 +49,7 @@ def get_tipos_documento():
 def get_fornecedores():
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT nome, nif FROM fornecedores")
+    cursor.execute("SELECT RTRIM(nome), RTRIM(nif) FROM fornecedores")
     fornecedores = [{"nome": row[0], "nif": str(row[1])} for row in cursor.fetchall()]
     conn.close()
     return fornecedores
@@ -57,7 +57,7 @@ def get_fornecedores():
 def get_clientes():
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT id, nome, nif FROM clientes")
+    cursor.execute("SELECT id, RTRIM(nome), RTRIM(nif) FROM clientes")
     clientes = [{"id": row[0], "nome": row[1], "nif": str(row[2])} for row in cursor.fetchall()]
     conn.close()
     return clientes
@@ -87,7 +87,7 @@ def get_processos():
 def get_equipas():
     conn = get_connection()
     cursor = conn.cursor()
-    cursor.execute("SELECT id, nome FROM equipas")
+    cursor.execute("SELECT id, RTRIM(nome) FROM equipas")
     equipas = [{"id": row[0], "nome": row[1]} for row in cursor.fetchall()]
     conn.close()
     return equipas
@@ -97,7 +97,7 @@ def inserir_processo_se_nao_existir(ref, id_cliente, descricao=None):
     cursor = conn.cursor()
 
     # Verifica se já existe
-    cursor.execute("SELECT ref FROM processos WHERE ref = ?", (ref,))
+    cursor.execute("SELECT RTRIM(ref) FROM processos WHERE ref = ?", (ref,))
     existente = cursor.fetchone()
 
     if not existente:

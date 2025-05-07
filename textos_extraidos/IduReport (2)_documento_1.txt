@@ -1,4 +1,4 @@
-ATCUD:JJ9GM7C5-2668
+ATCUD:JJ9GM7C5-1884
 FRANCISCO GOMES SANTOS LDA
 RUA DO PADRÃO N 393
 DUAS IGREJAS PNF
@@ -7,7 +7,7 @@ Pagamento :
 Referência Designação Qtd. Pr.Unitário Desc% TotalData : Expedição :Nº de Contribuinte :
 Nosso CarroN. Cliente:       8941Nº
 ORIGINALSérie /Fatura
-FT 2025A1/2668
+FT 2025A1/1884
 IVA
 Cap. Social:  5000€DROGARIA DO CASAL,Lda
 Rua de Angeiras, 468
@@ -18,26 +18,25 @@ Email:drogaria.casal@sapo.pt|
 Cons.Reg. Com. de Matosinhos, Mat. nº 9024504043072
 (Chamada para rede fixa nacional)
 505051265
-2025-04-2912668
-44,00 100CP003 CAPOTO PLACA EPS 100 X 50 X 3 40,00 1,100 23,00
-44,40 100CP004 CAPOTO PLACA EPS 100 X 50 X 4 30,00 1,480 23,00
+2025-03-2711884
+316,80 100CS025 CIMENTO SECIL  -  saco 25KG 64,00 4,950 23,00
 Total antes de descontos
 Desconto Comercial
 Total de I.V.A.Valor do I.V.A. Taxa Base de Incidência
 %
 %
 %
-TOTAL em EUROS71,87
+TOTAL em EUROS257,56
 Local de Carga: Angeiras Hora Carga: Local de Descarga: LABRUGE%
-14:10 Data Carga: 29.04.2025 HoraNIB:001000002498926000170
-Software PHC - ECO9-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
+07:23 Data Carga: 27.03.2025 HoraNIB:001000002498926000170
+Software PHC - PJjZ-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
 Página 1 de 1
 Total Iliquido:IVA Incluido à Taxa Legal
-16,5323,006,00
+59,2423,006,00
 13,00
-0,0071,87 16,53 71,8771,87
-16,53 88,402025-04-29
-ATCUD:JJ9GM7C5-2668
+0,00257,56 59,24 257,56257,56
+59,24 316,802025-03-27
+ATCUD:JJ9GM7C5-1884
 FRANCISCO GOMES SANTOS LDA
 RUA DO PADRÃO N 393
 DUAS IGREJAS PNF
@@ -46,7 +45,7 @@ Pagamento :
 Referência Designação Qtd. Pr.Unitário Desc% TotalData : Expedição :Nº de Contribuinte :
 Nosso CarroN. Cliente:       8941Nº
 DUPLICADOSérie /Fatura
-FT 2025A1/2668
+FT 2025A1/1884
 IVA
 Cap. Social:  5000€DROGARIA DO CASAL,Lda
 Rua de Angeiras, 468
@@ -57,26 +56,25 @@ Email:drogaria.casal@sapo.pt|
 Cons.Reg. Com. de Matosinhos, Mat. nº 9024504043072
 (Chamada para rede fixa nacional)
 505051265
-2025-04-2912668
-44,00 100CP003 CAPOTO PLACA EPS 100 X 50 X 3 40,00 1,100 23,00
-44,40 100CP004 CAPOTO PLACA EPS 100 X 50 X 4 30,00 1,480 23,00
+2025-03-2711884
+316,80 100CS025 CIMENTO SECIL  -  saco 25KG 64,00 4,950 23,00
 Total antes de descontos
 Desconto Comercial
 Total de I.V.A.Valor do I.V.A. Taxa Base de Incidência
 %
 %
 %
-TOTAL em EUROS71,87
+TOTAL em EUROS257,56
 Local de Carga: Angeiras Hora Carga: Local de Descarga: LABRUGE%
-14:10 Data Carga: 29.04.2025 HoraNIB:001000002498926000170
-Software PHC - ECO9-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
+07:23 Data Carga: 27.03.2025 HoraNIB:001000002498926000170
+Software PHC - PJjZ-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
 Página 1 de 1
 Total Iliquido:IVA Incluido à Taxa Legal
-16,5323,006,00
+59,2423,006,00
 13,00
-0,0071,87 16,53 71,8771,87
-16,53 88,402025-04-29
-ATCUD:JJ9GM7C5-2668
+0,00257,56 59,24 257,56257,56
+59,24 316,802025-03-27
+ATCUD:JJ9GM7C5-1884
 FRANCISCO GOMES SANTOS LDA
 RUA DO PADRÃO N 393
 DUAS IGREJAS PNF
@@ -85,7 +83,7 @@ Pagamento :
 Referência Designação Qtd. Pr.Unitário Desc% TotalData : Expedição :Nº de Contribuinte :
 Nosso CarroN. Cliente:       8941Nº
 TRIPLICADOSérie /Fatura
-FT 2025A1/2668
+FT 2025A1/1884
 IVA
 Cap. Social:  5000€DROGARIA DO CASAL,Lda
 Rua de Angeiras, 468
@@ -96,22 +94,21 @@ Email:drogaria.casal@sapo.pt|
 Cons.Reg. Com. de Matosinhos, Mat. nº 9024504043072
 (Chamada para rede fixa nacional)
 505051265
-2025-04-2912668
-44,00 100CP003 CAPOTO PLACA EPS 100 X 50 X 3 40,00 1,100 23,00
-44,40 100CP004 CAPOTO PLACA EPS 100 X 50 X 4 30,00 1,480 23,00
+2025-03-2711884
+316,80 100CS025 CIMENTO SECIL  -  saco 25KG 64,00 4,950 23,00
 Total antes de descontos
 Desconto Comercial
 Total de I.V.A.Valor do I.V.A. Taxa Base de Incidência
 %
 %
 %
-TOTAL em EUROS71,87
+TOTAL em EUROS257,56
 Local de Carga: Angeiras Hora Carga: Local de Descarga: LABRUGE%
-14:10 Data Carga: 29.04.2025 HoraNIB:001000002498926000170
-Software PHC - ECO9-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
+07:23 Data Carga: 27.03.2025 HoraNIB:001000002498926000170
+Software PHC - PJjZ-Processado por programa certificado nº 0006/AT (20250122.8229)Os artigos/serviços facturados foram colocados à disposição do adquirente nesta data ( Nº 5º , Alínea f) do Artº 36º do CIVA):
 Página 1 de 1
 Total Iliquido:IVA Incluido à Taxa Legal
-16,5323,006,00
+59,2423,006,00
 13,00
-0,0071,87 16,53 71,8771,87
-16,53 88,402025-04-29
+0,00257,56 59,24 257,56257,56
+59,24 316,802025-03-27

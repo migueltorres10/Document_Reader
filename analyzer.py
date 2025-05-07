@@ -1,3 +1,4 @@
+import re
 from db_utils import get_fornecedores, get_clientes
 from document_types import (
     TIPOS_DOCUMENTO_FORNECEDOR,
@@ -22,16 +23,47 @@ def classificar_por_padroes(texto, padroes, padrao_padrao):
                 return tipo
     return padrao_padrao
 
+import re
+
 def identificar_fornecedor(texto):
     fornecedores = get_fornecedores()
+    
+    texto_limpo = re.sub(r'\s+', '', texto.lower())
+
     for f in fornecedores:
-        if f["nif"] in texto or f["nome"].lower() in texto.lower():
+        nif = f["nif"]
+        nome = f["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        
+        # Primeiro verifica se o NIF está presente
+        if nif in texto_limpo:
             return f
+    
+    # Se não encontrou pelo NIF, tenta agora pelo nome
+    for f in fornecedores:
+        nome = f["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        if nome in texto_limpo:
+            return f
+
     return None
+
 
 def identificar_cliente(texto):
     clientes = get_clientes()
+    
+    texto_limpo = re.sub(r'\s+', '', texto.lower())
+
     for c in clientes:
-        if c["nif"] in texto or c["nome"].lower() in texto.lower():
+        nif = c["nif"]
+        nome = c["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        
+        # Primeiro verifica se o NIF está presente
+        if nif in texto_limpo:
             return c
+
+    # Se não encontrou pelo NIF, tenta agora pelo nome
+    for c in clientes:
+        nome = c["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        if nome in texto_limpo:
+            return c
+
     return None

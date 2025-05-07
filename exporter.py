@@ -13,7 +13,7 @@ def exportar_documentos_csv(lista_features, nome_arquivo="relatorio_documentos.c
 
         for idx, ftr in enumerate(lista_features):
             writer.writerow({
-                "Documento": f"Documento {idx + 1}",
+                "Documento": ftr.get("documento_origem", ""),
                 "Tipo": ftr["tipo"],
                 "Número": ftr["numero"] or "",
                 "Data": ftr["data"] or "",

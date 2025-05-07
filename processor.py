@@ -26,18 +26,22 @@ def log_features_resumido(features, idx=None):
     print("🔍 Análise concluída.")
 
 def processar_pasta_pdf(diretorio_pdfs):
-    arquivos = [f for f in os.listdir(diretorio_pdfs) if f.lower().endswith(".pdf")]
+    arquivos = []
+
+    for root, _, files in os.walk(diretorio_pdfs):
+        for file in files:
+            if file.lower().endswith(".pdf"):
+                arquivos.append(os.path.join(root, file))
 
     if not arquivos:
-        print("⚠️ Nenhum PDF encontrado no diretório.")
+        print("⚠️ Nenhum PDF encontrado no diretório ou subdiretórios.")
         return
 
     documentos_extraidos = []
 
     for arquivo in arquivos:
-        caminho = os.path.join(diretorio_pdfs, arquivo)
         print(f"\n📄 Processando arquivo: {arquivo}")
-        paginas = process_pdf(caminho)
+        paginas = process_pdf(arquivo)
         documentos = separar_documentos_por_conteudo(paginas)
 
         textos_puros = []
@@ -48,6 +52,7 @@ def processar_pasta_pdf(diretorio_pdfs):
                 textos_puros.append(texto)
 
                 features = extract_features(texto)
+                features["documento_origem"] = os.path.basename(arquivo)  # nome do ficheiro PDF
                 documentos_extraidos.append(features)
                 log_features_resumido(features, idx=i)
 
@@ -73,7 +78,7 @@ def processar_pasta_pdf(diretorio_pdfs):
                     numero=numero or f"Desconhecido-{i}",
                     data=data,
                     total=0.0,
-                    caminho_pdf=caminho,
+                    caminho_pdf=arquivo,
                     nif_fornecedor=fornecedor["nif"] if fornecedor else None,
                     id_equipa=None,
                     id_processo=numero if cliente else None

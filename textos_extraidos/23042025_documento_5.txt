@@ -1,0 +1,70 @@
+. 4
+britaFielX
+
+Francisco Gomes Santos Lda
+Castanheira de Cima Duas Igrejas
+
+Nº Guia Remessa GR GRVB25/04903
+
+——
+
+Datarde Aegisto Original Pág. 1/1 pensfiel
+2025-03-18 4560-071 DUAS IGREJAS PNF
+PORTO
+Portugal
+Venda-a Nº Cliente Nº Contribuinte Data Documento Data Envio Hora Início Transporte
+0097 505051265 2025-03-18 2025-03-18 15:27:46
+
+L —
+
+Nº Descrição Quantidade — Unid. Medida
+BR-0614 Brita 6/14 mm [a) b) O] 1686 Tonelada
+
+Declaração de Desempenho n.º 005
+Descrição Petrográfica:
+
+Granitóide do tipo monzogranito
+
+de granulado médio duas micas
+Agregados para:
+
+Materiais granulares não tratados
+Materiais com ligantes hidraulicos
+Utilização em trabalhos de engenharia civil
+Construção de estradas
+
+Betão
+
+Misturas betuminosas
+
+Tratamentos superficiais para estradas
+aeroportos e outrasáreas de circulação
+
+——
+
+Viatura 18-38-NG Peso Bruto(Kg) 28 520,00 C E
+Data Carga — 18/03/2025 Tara(Kg) 11 660,00 TIEESPIROAA,
+Hora Carga — 15:27 Peso Líquido(Kg) 16 860,00 Beónoniçõo drítinis
+D) EN 1I043:2002 e EM 13043:2002/AC2004
+
+6) EM 13242;20024A1:2007
+Rua da Presa n. 416 d) ENTISSI-1:2002 « ENTISSI-L2002/AC/2004
+
+Local Carga ) NP EN 13450:2005 é EN 1I450:2002/AC:2004
+
+Local Descarga “Morada do Cliente
+
+Data recepção: — / / "
+
+"Recebido por'
+
+bloy-Processado por Programa Certificado Nº 1842 /AT - Microsoft Dynamics NAV - Softstore
+Código AT: Documento Comunicado à AT17056966908
+ATCUD: JJ9X9J2G-04903
+
+Britaó
+NIF : 507779606 | Capital Soc:
+GSede: Avenida Pedro Guedes .
+Pecreira : Vilar (EM 569) —T . 4560
+Seriços Administrativos: Av. Joamuim
+
