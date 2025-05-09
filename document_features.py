@@ -1,24 +1,8 @@
-from analyzer import identificar_tipo_documento, identificar_fornecedor, identificar_cliente
-from document_number_patterns import PADROES_NUMERO_DOCUMENTO
+from analyzer import identificar_tipo_documento, identificar_fornecedor, identificar_processo, identificar_equipa
+import importlib
 from datetime import date
 from dateutil import parser
 import re
-
-def extract_document_number(texto, tipo):
-    """
-    Extrai número com base em siglas conhecidas para o tipo identificado.
-    """
-    texto = texto.lower()
-    padroes = PADROES_NUMERO_DOCUMENTO.get(tipo, [])
-
-    for sigla in padroes:
-        # Exemplo: ft 1234/2024 ou nota de crédito: 8765
-        pattern = rf'{sigla}[\s:]*([a-z0-9\-\/\.]+)'
-        match = re.search(pattern, texto)
-        if match:
-            return match.group(1).strip()
-
-    return None
 
 def extract_date(texto):
     hoje = date.today()
@@ -40,14 +24,22 @@ def extract_date(texto):
 def extract_features(texto):
     tipo = identificar_tipo_documento(texto)
     fornecedor = identificar_fornecedor(texto)
-    cliente = identificar_cliente(texto)
-    numero = extract_document_number(texto, tipo)
+    processo = identificar_processo(texto)
+    equipa = identificar_equipa(texto)
     data = extract_date(texto)
+
+    try:
+        modulo = importlib.import_module(f"document_features.extractor_{tipo.lower().replace(' ', '_')}")
+        features_tipo = modulo.extract_features(texto)
+    except ModuleNotFoundError:
+        print(f"⚠️ Nenhum extractor encontrado para tipo: {tipo}")
+        features_tipo = {}
 
     return {
         "tipo": tipo,
         "fornecedor": fornecedor,
-        "cliente": cliente,
-        "numero": numero,
-        "data": data
+        "processo": processo,
+        "equipa": equipa,
+        "data": data,
+        **features_tipo
     }

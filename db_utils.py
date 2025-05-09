@@ -67,7 +67,7 @@ def get_processos():
     conn = get_connection()
     cursor = conn.cursor()
     cursor.execute("""
-        SELECT p.ref, p.id_cliente, p.descricao, c.nome
+        SELECT p.ref as ref, p.id_cliente as id_cliente, p.descricao as descricao, c.nome as cliente_nome
         FROM processos p
         JOIN clientes c ON p.id_cliente = c.id
     """)

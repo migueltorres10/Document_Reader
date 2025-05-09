@@ -1,9 +1,9 @@
 import re
-from db_utils import get_fornecedores, get_clientes
+from db_utils import get_fornecedores, get_processos, get_equipas
 from document_types import (
     TIPOS_DOCUMENTO_FORNECEDOR,
-    TIPOS_DOCUMENTO_CLIENTE,
-    TIPOS_ESPECIAIS
+    TIPOS_DOCUMENTO_PROCESSO,
+    TIPOS_DOCUMENTOS_EQUIPA
 )
 
 def identificar_tipo_documento(texto):
@@ -11,10 +11,10 @@ def identificar_tipo_documento(texto):
 
     if identificar_fornecedor(texto):
         return classificar_por_padroes(texto, TIPOS_DOCUMENTO_FORNECEDOR, "Cotação")
-    elif identificar_cliente(texto):
-        return classificar_por_padroes(texto, TIPOS_DOCUMENTO_CLIENTE, "Orçamento")
-    else:
-        return classificar_por_padroes(texto, TIPOS_ESPECIAIS, "Desconhecido")
+    elif identificar_processo(texto):
+        return classificar_por_padroes(texto, TIPOS_DOCUMENTO_PROCESSO)
+    elif identificar_equipa(texto):
+        return classificar_por_padroes(texto, TIPOS_DOCUMENTOS_EQUIPA)
 
 def classificar_por_padroes(texto, padroes, padrao_padrao):
     for tipo, palavras in padroes.items():
@@ -47,23 +47,28 @@ def identificar_fornecedor(texto):
     return None
 
 
-def identificar_cliente(texto):
-    clientes = get_clientes()
+def identificar_processo(texto):
+    processos = get_processos()
     
     texto_limpo = re.sub(r'\s+', '', texto.lower())
 
-    for c in clientes:
-        nif = c["nif"]
-        nome = c["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
-        
-        # Primeiro verifica se o NIF está presente
-        if nif in texto_limpo:
-            return c
+    for p in processos:
+        ref = p["ref"]
 
-    # Se não encontrou pelo NIF, tenta agora pelo nome
-    for c in clientes:
-        nome = c["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        if ref in texto_limpo:
+            return p
+
+    return None
+
+def identificar_equipa(texto):
+    equipas = get_equipas()
+    
+    texto_limpo = re.sub(r'\s+', '', texto.lower())
+
+    for e in equipas:
+        nome = e["nome"].lower().replace(" ", "").replace(",", "").replace(".", "")
+        
         if nome in texto_limpo:
-            return c
+            return e
 
     return None
